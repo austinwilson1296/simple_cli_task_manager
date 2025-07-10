@@ -8,7 +8,8 @@ import (
 	"github.com/austinwilson1296/to-do/task"
 	"github.com/google/shlex"
 )
-
+// Command to add a new task to the in-memory task list. 
+// Requires flags for title (-n), due date (-dd), and priority (-p).
 func commandAdd(cfg *Config, args ...string) error {
 	
 	argsToString := strings.Join(args, " ")

@@ -3,7 +3,9 @@ package cmd
 import(
 	"fmt"
 )
-
+// Command to list all tasks in the in-memory task list.
+// It prints each task's ID, title, due date, and priority to the console.
+// If there are no tasks, it informs the user that no tasks are available.
 func commandList(cfg *Config, args ...string) error {
 	if len(cfg.tasks) == 0 {
 		fmt.Println("No tasks available.")

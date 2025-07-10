@@ -7,16 +7,17 @@ import (
 	"strings"
 	"github.com/austinwilson1296/to-do/task"
 )
-
+// Command struct represents a command in the CLI application.
 type Command struct {
 	Name string
 	handler func(*Config,...string) error
 	help string
 }
+// Config struct holds the configuration for the CLI application as well as the in-memory task list.
 type Config struct {
 	tasks []task.Task
 }
-
+// Entry point for the CLI application.
 func Run(cfg *Config) {
 	
 	scanner := bufio.NewScanner(os.Stdin)

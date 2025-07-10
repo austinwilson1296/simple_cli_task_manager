@@ -3,7 +3,8 @@ package cmd
 import (
 	"fmt"
 )
-
+// Command to remove a task from the in-memory task list.
+// It takes the task ID as an argument and removes the corresponding task.
 func commandRemove(cfg *Config, args ...string) error {
 	if len(args) < 1 {
 		return fmt.Errorf("task ID is required")
